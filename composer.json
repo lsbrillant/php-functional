@@ -1,0 +1,19 @@
+{
+    "name": "ls_brillant/functional",
+    "description": "A set of functional types for php",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Lucien Brillant",
+            "email": "lucienbrillant@gmail.com"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Functional\\": "src/"
+        },
+        "files" : [ "src/functions.php" ]
+    }
+}
