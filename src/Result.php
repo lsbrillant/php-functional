@@ -1,18 +1,14 @@
 <?php
 namespace Functional;
 
-use function Functional\compose;
-
-require_once("./Monad.php");
-
 /**
-> $r = Result::Ok(5);
-> $r->isOk();
-true
-> $v = $r->unwrap() or return $r; 
-
-
-*/
+ * Result type for php
+ * ===================
+ *
+ * A result type similar to the one 
+ * in rust.
+ * 
+ */
 class Result implements Monad {
   
   private $data;
@@ -44,7 +40,13 @@ class Result implements Monad {
   public function unwrap() {
     return $this->data;
   }
-  
+
+  /**
+   * @param mixed $backup 
+   *    The value to return if the result is not "ok"
+   *    or a callable that produces such a value.
+   * @return mixed
+   */ 
   public function unwrapOr($backup) {
     if (static::isOk($this)) {
       return $this->data;

@@ -3,8 +3,6 @@ namespace Functional;
 
 use function Functional\compose;
 
-require_once("./Monad.php");
-
 function None() {
   return Maybe::None();
 }
