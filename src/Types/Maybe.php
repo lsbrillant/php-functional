@@ -1,8 +1,6 @@
 <?php
 namespace Functional\Types;
 
-use function Functional\compose;
-
 function None() {
   return Maybe::None();
 }
