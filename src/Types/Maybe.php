@@ -1,5 +1,5 @@
 <?php
-namespace Functional;
+namespace Functional\Types;
 
 use function Functional\compose;
 

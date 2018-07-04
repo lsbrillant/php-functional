@@ -1,5 +1,5 @@
 <?php
-namespace Functional;
+namespace Functional\Types;
 
 interface Monad {
   public static function pure($data);
